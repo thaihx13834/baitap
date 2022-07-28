@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
   const { cart, total } = useSelector((store) => store);
+  console.log(total);
 
   const dipatch = useDispatch();
 
@@ -75,9 +76,9 @@ const Cart = () => {
           </div>
         );
       })}
-      <div className="total">
-        <div>Total</div>
-        <h2>{total}</h2>
+      <div className="total d-flex justify-content-between aligns-center">
+        <div>Tổng giá trị đơn hàng </div>
+        <h2>{total} vnđ</h2>
       </div>
     </div>
   );

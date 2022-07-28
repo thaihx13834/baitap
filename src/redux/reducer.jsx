@@ -23,9 +23,8 @@ const rootReducer = (state = initialValue, action) => {
 
       console.log(newCart);
       return {
-        ...state,
         cart: newCart,
-        total: newCart.reduce((accu, item) => accu + item.saleOffPrice, 0),
+        total: newCart.reduce((accu, item) => accu + item.total, 0),
       };
 
     case "cart/increase":
@@ -43,7 +42,7 @@ const rootReducer = (state = initialValue, action) => {
       return {
         ...state,
         cart: cart,
-        total: cart.reduce((accu, item) => accu + item.saleOffPrice, 0),
+        total: cart.reduce((accu, item) => accu + item.total, 0),
       };
 
     case "cart/decrease":
@@ -66,7 +65,7 @@ const rootReducer = (state = initialValue, action) => {
       return {
         ...state,
         cart: cartt,
-        total: cartt.reduce((accu, item) => accu + item.saleOffPrice, 0),
+        total: cartt.reduce((accu, item) => accu + item.total, 0),
       };
 
     case "cart/delete":
@@ -77,7 +76,7 @@ const rootReducer = (state = initialValue, action) => {
       return {
         ...state,
         cart: carta,
-        total: carta.reduce((accu, item) => accu + item.saleOffPrice, 0),
+        total: carta.reduce((accu, item) => accu + item.total, 0),
       };
 
     default:
